@@ -1,6 +1,6 @@
 <template>
     <div class="side search showing" id="searchForm">
-        <input type="search" @keyup.enter.prevent="search" v-model="name" placeholder=" Search">
+        <input type="search" @keyup.enter.prevent="search" v-model="name" placeholder=" Zoek Video">
     </div>
 </template>
 
@@ -11,7 +11,6 @@
                 name: ''
             }
         },
-
         methods:{
             search: function(){
                 this.$route.router.go('/search/'+this.name);
@@ -29,7 +28,6 @@
         background: transparent;
         margin-top: 10px;
     }
-
     #searchForm>input{
         width: 250px;
         height: 30px;
@@ -40,7 +38,6 @@
         color: #303030;
         font-size: 13px;
     }
-
     #searchForm>input:focus {
         outline: none;
     }
